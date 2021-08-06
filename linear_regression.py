@@ -54,7 +54,7 @@ class LinearRegression:
         axis.set_xlim(x_start, x_end)
 
     def error(self):
-        return 1 / (2 * self.m) * np.sum((self.predict_with_transformation(self.X) - Y) ** 2)
+        return 1 / (2 * self.m) * np.sum((self.predict_with_transformation(self.X) - self.Y) ** 2)
 
     def change_lr(self, new_lr):
         if (new_lr <= 0):
